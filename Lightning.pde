@@ -2,11 +2,10 @@ int startX = 150;
 int startY = 0;
 int endX = 150;
 int endY = 0;
-int startX2 = 0;
-int startY2 = 150;
-int endX2 = 0;
-int endY2 = 150;
-
+int startX2;
+int startY2;
+int endX2;
+int endY2;
 void setup()
 {
   size(300,300);
@@ -32,6 +31,7 @@ void draw()
 		startX2 = endX2;
 		startY2 = endY2;
 	}
+	egg();
 
 }
 void mousePressed()
@@ -46,3 +46,18 @@ void mousePressed()
 	endY2 = startY2;
 }
 
+void egg()
+{
+	stroke(100,100,100);
+	ellipse(150, 275, 35, 50);
+	beginShape();
+	vertex(132.5, 275);
+	vertex(137.5, 277.5);
+	vertex(142.5, 272.5);
+	vertex(147.5, 277.5);
+	vertex(152.5, 272.5);
+	vertex(157.5, 277.5);
+	vertex(162.5, 272.5);
+	vertex(167.5,275);
+	endShape();
+}
